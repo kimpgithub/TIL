@@ -20,7 +20,7 @@ for (i in numbers){
     when{
         i%15 == 0 -> print("FizzBuzz ")
         i%5 == 0 -> print("Buzz ")
-        i%3 == 0 -> print(("Fizz "))
+        i%3 == 0 -> print("Fizz ")
         else -> print("$i ")
     }
 }
