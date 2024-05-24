@@ -1,0 +1,21 @@
+class Solution {
+
+    fun solution(numbers: IntArray): Double {
+        var answer: Double = 0.0
+        var sum: Int = 0
+        val size = numbers.size
+
+        for (i in 0 until size)
+            sum += numbers[i]
+
+        answer = sum.toDouble() / size
+
+        println("numbers의 원소들의 평균 값은 $answer 입니다.")
+
+        return answer
+    }
+}
+
+val solution = Solution()
+val result = solution.solution(intArrayOf(1, 2, 3, 4, 7))
+println("결과 : $result")
