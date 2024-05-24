@@ -1,0 +1,26 @@
+class Solution {
+
+    fun solution(num_list: IntArray): Array<IntArray> {
+        var answer: IntArray = intArrayOf()
+        var evenlist = mutableListOf<Int>()
+        var oddlist = mutableListOf<Int>()
+
+
+        for (num in num_list) {
+            if (num % 2 == 0) {
+                evenlist.add(num)
+            } else {
+                oddlist.add(num)
+            }
+        }
+
+        println("짝수 리스트는 $evenlist 이고, 총 ${evenlist.size} 개입니다.")
+        println("홀수 리스트는 $oddlist 이고, 총 ${oddlist.size} 개입니다.\n")
+
+        return arrayOf(evenlist.toIntArray(), oddlist.toIntArray())
+    }
+}
+
+val solution = Solution()
+val result = solution.solution(intArrayOf(1, 2, 3, 4, 7))
+println("결과: ${result.contentDeepToString()}")
